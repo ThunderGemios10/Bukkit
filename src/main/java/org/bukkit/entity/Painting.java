@@ -2,11 +2,12 @@ package org.bukkit.entity;
 
 import org.bukkit.Art;
 import org.bukkit.event.painting.PaintingBreakEvent;
+import org.bukkit.material.Attachable;
 
 /**
  * Represents a Painting.
  */
-public interface Painting extends Hanging {
+public interface Painting extends Entity, Attachable {
     /**
      * Get the art on this painting
      *
@@ -33,3 +34,4 @@ public interface Painting extends Hanging {
      */
     public boolean setArt(Art art, boolean force);
 }
+

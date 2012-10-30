@@ -27,11 +27,7 @@ public interface ItemFrame extends Hanging {
          */
         COUNTER_CLOCKWISE;
 
-        private static final Rotation [] rotations;
-
-        static {
-            rotations = values();
-        }
+        private static final Rotation [] rotations = values();
 
         /**
          * Rotate clockwise one value, as if the frame was right-clicked by a player.
@@ -43,7 +39,7 @@ public interface ItemFrame extends Hanging {
         }
 
         /**
-         * Attempts to get the Rotation with the given value
+         * Attempts to get the Rotation with the given value.
          *
          * @param value Value of the Rotation to get
          * @return Rotation if found, or null
@@ -58,28 +54,30 @@ public interface ItemFrame extends Hanging {
     }
 
     /**
-     * Get the item in this frame
+     * Get the item in this frame.
      *
-     * @return The item
+     * @return The item in the frame. If there is currently no item in the frame, an ItemStack of AIR will be returned.
+     *  The returned ItemStack is a defensive copy; to set the item in the frame use the
+     *  {@link #setItem(ItemStack) setItem} method.
      */
     public ItemStack getItem();
 
     /**
-     * Set the item in this frame
+     * Set the item in this frame.
      *
-     * @param item The new item
+     * @param item The new item. A null ItemStack or an ItemStack of AIR will set the frame to have no item.
      */
     public void setItem(ItemStack item);
 
     /**
-     * Get the rotation of the frame's item
+     * Get the rotation of the frame's item.
      *
-     * @return The direction
+     * @return The rotation of the item
      */
     public Rotation getRotation();
 
     /**
-     * Set the rotation of the frame's item
+     * Set the rotation of the frame's item.
      *
      * @param rotation The new rotation
      */
