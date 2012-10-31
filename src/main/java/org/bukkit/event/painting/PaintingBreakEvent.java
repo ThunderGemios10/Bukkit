@@ -1,16 +1,12 @@
 package org.bukkit.event.painting;
 
-import org.bukkit.Warning;
 import org.bukkit.entity.Painting;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
 /**
  * Triggered when a painting is removed
- * @deprecated Use {@link org.bukkit.event.hanging.HangingBreakEvent} instead.
  */
-@Deprecated
-@Warning(reason="This event has been replaced by HangingBreakEvent")
 public class PaintingBreakEvent extends PaintingEvent implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
@@ -56,9 +52,7 @@ public class PaintingBreakEvent extends PaintingEvent implements Cancellable {
         OBSTRUCTION,
         /**
          * Removed by water flowing over it
-         * @deprecated Water no longer triggers hanging entities to be removed
          */
-        @Deprecated
         WATER,
         /**
          * Removed by destroying the block behind it, etc
