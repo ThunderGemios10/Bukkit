@@ -1,6 +1,5 @@
 package org.bukkit.event.painting;
 
-import org.bukkit.Warning;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Painting;
@@ -10,10 +9,7 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Triggered when a painting is created in the world
- * @deprecated  Use HangingPlaceEvent instead.
  */
-@Deprecated
-@Warning(reason="This event has been replaced by HangingPlaceEvent")
 public class PaintingPlaceEvent extends PaintingEvent implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
