@@ -1,30 +1,28 @@
-package org.bukkit.event.painting;
+package org.bukkit.event.hanging;
 
-import org.bukkit.entity.Painting;
+import org.bukkit.entity.Hanging;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
 /**
- * Triggered when a painting is removed
- * @deprecated  Use HangingBreakEvent instead.
+ * Triggered when a hanging item is removed
  */
-@Deprecated
-public class PaintingBreakEvent extends PaintingEvent implements Cancellable {
+public class HangingBreakEvent extends HangingEvent implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
-    private final RemoveCause cause;
+    private final HangingBreakEvent.RemoveCause cause;
 
-    public PaintingBreakEvent(final Painting painting, final RemoveCause cause) {
-        super(painting);
+    public HangingBreakEvent(final Hanging hanging, final HangingBreakEvent.RemoveCause cause) {
+        super(hanging);
         this.cause = cause;
     }
 
     /**
-     * Gets the cause for the painting's removal
+     * Gets the cause for the item's removal
      *
-     * @return the RemoveCause for the painting's removal
+     * @return the RemoveCause for the item's removal
      */
-    public RemoveCause getCause() {
+    public HangingBreakEvent.RemoveCause getCause() {
         return cause;
     }
 
@@ -54,7 +52,9 @@ public class PaintingBreakEvent extends PaintingEvent implements Cancellable {
         OBSTRUCTION,
         /**
          * Removed by water flowing over it
+         * @deprecated Water no longer triggers hanging entities to be removed
          */
+        @Deprecated
         WATER,
         /**
          * Removed by destroying the block behind it, etc
