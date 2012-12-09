@@ -357,5 +357,11 @@ public interface Block extends Metadatable {
      * @return a list of dropped items for this type of block
      */
     Collection<ItemStack> getDrops(ItemStack tool);
-
+    
+    /**
+     * Get the height of the entity's head from it's feet
+     *
+     * @return The entity's head's height
+     */
+    public float getHeadHeight();
 }
