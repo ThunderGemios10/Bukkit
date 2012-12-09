@@ -358,4 +358,10 @@ public interface Block extends Metadatable {
      */
     Collection<ItemStack> getDrops(ItemStack tool);
 
+    /**
+     * Check if the block is solid and cannot be passed through
+     *
+     * @return True if the block is solid
+     */
+    boolean isSolid();
 }
