@@ -357,5 +357,5 @@ public interface Block extends Metadatable {
      * @return a list of dropped items for this type of block
      */
     Collection<ItemStack> getDrops(ItemStack tool);
-
+    
 }

@@ -537,5 +537,5 @@ public enum Material {
      */
     public boolean isRecord() {
         return id >= GOLD_RECORD.id && id <= RECORD_12.id;
-    }
+    }  
 }
