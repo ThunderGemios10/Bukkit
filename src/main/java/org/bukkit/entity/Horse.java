@@ -203,7 +203,7 @@ public interface Horse extends Animals, Vehicle, InventoryHolder, Tameable {
      * domestication level of the horse, or else it will be clamped.
      * Use {@link #getMaxDomestication()} to determine the max domestication.
      *
-     * @param domestication domestication level.
+     * @param level domestication level.
      */
     public void setDomestication(int level);
 
@@ -229,4 +229,25 @@ public interface Horse extends Animals, Vehicle, InventoryHolder, Tameable {
      * @param level the max domestication level.
      */
     public void setMaxDomestication(int level);
+
+    /**
+     * Gets the jump strength of this horse.
+     * <p>
+     * Jump strength defines how high the horse can jump. A higher jump strength
+     * increases how high a jump will go.
+     *
+     * @return the horse's jump strength
+     */
+    public double getJumpStrength();
+
+    /**
+     * Sets the jump strength of this horse.
+     * <p>
+     * A higher jump strength increases how high a jump will go.
+     * Setting a jump strength to 0 will result in no jump.
+     * You cannot set a jump strength to a value below 0.
+     *
+     * @param strength jump strength for this horse
+     */
+    public void setJumpStrength(double strength);
 }
