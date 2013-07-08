@@ -4,7 +4,7 @@ package org.bukkit.entity;
 /**
  * A wild tameable cat
  */
-public interface Ocelot extends Animals, Sittable {
+public interface Ocelot extends Animals, Sittable, Tameable {
     /**
      * Gets the current type of this cat.
      *

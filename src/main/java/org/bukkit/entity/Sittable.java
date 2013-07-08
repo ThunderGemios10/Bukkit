@@ -1,6 +1,6 @@
 package org.bukkit.entity;
 
-public interface Sittable extends Tameable {
+public interface Sittable {
 
     /**
      * Checks if this entity is sitting.
