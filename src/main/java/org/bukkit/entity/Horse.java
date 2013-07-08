@@ -199,9 +199,9 @@ public interface Horse extends Animals, Vehicle, InventoryHolder, Tameable {
      * Setting the domestication level to a high value will increase the
      * horse's chances of becoming tame.
      * <p>
-     * Domestication level must be greater than zero and less than the max
-     * domestication level of the horse, or else it will be clamped.
-     * Use {@link #getMaxDomestication()} to determine the max domestication.
+     * Domestication level must be greater than zero and no greater than
+     * the max domestication level of the horse, determined with
+     * {@link #getMaxDomestication()}
      *
      * @param level domestication level.
      */
