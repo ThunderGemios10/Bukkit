@@ -1,11 +1,11 @@
-Bukkit
+HuskBukkitAPI
 ======
 
 A Minecraft Server API.
 
-Website: [http://bukkit.org](http://bukkit.org)  
+Website: [http://enterpriseminecraft.com/husk](http://enterpriseminecraft.com/husk)  
 Bugs/Suggestions: [http://leaky.bukkit.org](http://leaky.bukkit.org)  
-Contributing Guidelines: [CONTRIBUTING.md](https://github.com/Bukkit/Bukkit/blob/master/CONTRIBUTING.md)
+Contributing Guidelines: [CONTRIBUTING.md](https://github.com/EnterpriseMinecraft/HuskBukkit-API/blob/master/CONTRIBUTING.md)
 
 Compilation
 -----------
